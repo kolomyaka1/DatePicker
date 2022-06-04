@@ -148,11 +148,7 @@
   }
   
   
-  
-  .date-picker .dates .days.long {
-    grid-template-rows: repeat(6, 31px);
-  }
-  
+
   .date-picker .dates .days .day {
       width: 58px;
       height: 32px;
