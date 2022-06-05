@@ -132,7 +132,7 @@ datePickerElemAll.forEach((datePickerElem) => {
         firstDayOfMonth.push(month + 1);
         firstDayOfMonth.push(1);
         firstDayOfMonth.push(year);
-        let currentDayOfMonth = new Date(firstDayOfMonth).toLocaleString('ru', {
+        let currentDayOfMonth = new Date(year, month, 1).toLocaleString('ru', {
             weekday: 'short',
         });
         switch (currentDayOfMonth) {
