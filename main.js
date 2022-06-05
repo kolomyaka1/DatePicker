@@ -182,10 +182,10 @@ datePickerElemAll.forEach((datePickerElem) => {
             currentMonthOfYear.push(month + 1);
             currentMonthOfYear.push(i);
             currentMonthOfYear.push(year);
-            let currentDayOfWeek = new Date(currentMonthOfYear).toLocaleString('ru', {
+            console.log(new Date(year,month, i).toLocaleString('ru', { weekday: 'short'}));
+            let currentDayOfWeek = new Date(year, month+1, i).toLocaleString('ru', {
                 weekday: 'short',
             });
-            
             if (currentMonthOfYear[0] < 10) {
                 monthDate = '0' + currentMonthOfYear[0];
             } else {
@@ -221,7 +221,6 @@ datePickerElemAll.forEach((datePickerElem) => {
                 populateDates();
             });
 
-            console.log(currentDayOfWeek);
             if (currentDayOfWeek == 'вс') {
                 daysElem.appendChild(week)
             }
