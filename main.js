@@ -210,7 +210,6 @@ datePickerElemAll.forEach((datePickerElem) => {
             }
 
             dayElem.addEventListener('click', function (e) {
-
                 e.target.classList.add('current');
                 selectedDate = new Date(year,(month),i);
                 selectedDay = i;
@@ -222,7 +221,7 @@ datePickerElemAll.forEach((datePickerElem) => {
                 populateDates();
             });
 
-
+            console.log(currentDayOfWeek);
             if (currentDayOfWeek == 'вс') {
                 daysElem.appendChild(week)
             }
