@@ -128,11 +128,8 @@ datePickerElemAll.forEach((datePickerElem) => {
             amountDays = 30;
         }
 
-        let firstDayOfMonth = [];
-        firstDayOfMonth.push(month + 1);
-        firstDayOfMonth.push(1);
-        firstDayOfMonth.push(year);
-        let currentDayOfMonth = new Date(year, month+1, 1).toLocaleString('ru', {
+        console.log(month);
+        let currentDayOfMonth = new Date(year, month, 1).toLocaleString('ru', {
             weekday: 'short',
         });
         switch (currentDayOfMonth) {
@@ -182,8 +179,7 @@ datePickerElemAll.forEach((datePickerElem) => {
             currentMonthOfYear.push(month + 1);
             currentMonthOfYear.push(i);
             currentMonthOfYear.push(year);
-            console.log(new Date(year,month, i).toLocaleString('ru', { weekday: 'short'}));
-            let currentDayOfWeek = new Date(year, month+1, i).toLocaleString('ru', {
+            let currentDayOfWeek = new Date(year, month, i).toLocaleString('ru', {
                 weekday: 'short',
             });
             if (currentMonthOfYear[0] < 10) {
