@@ -1,0 +1,205 @@
+/* Date Picker */
+
+label.date-picker-label {
+    flex-direction: column;
+}
+
+.date-picker {
+  position: relative;
+  width: 100%;
+  max-width: 365px;
+  height: 48px;
+  background-color: var(--white-color);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s;
+
+}
+
+.date-picker::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background-repeat: no-repeat;
+  transition: all .4s;
+}
+
+.date-picker.active::after {
+  background-color: var(--super-light-color);
+  border-radius: 5px;
+  transform: rotateX(180deg);
+  top: 11px;
+}
+
+.date-picker:hover:not(.active) {
+  background-color: var(--super-light-color);
+  border: 1px solid var(--super-light-color);
+}
+
+.date-picker .selected-date {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  padding: 12px 0 12px 16px;
+}
+
+.date-picker .dates {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  border-radius: 10px;
+  box-shadow: var(--normal-box-shadow);
+  border: 1px solid var(--divider-color);
+  left: 0;
+  right: 0;
+  background-color: var(--white-color);
+}
+
+.date-picker .dates.active {
+  display: block;
+  position: relative;
+  top: 5px;
+  left: 0;
+  z-index: 10;
+
+}
+
+.date-picker .dates .mth {
+  font-weight: var(--semi-bold-font-weight);
+  font-size: var(--normal-body-font-size);
+  color: var(--black-color);
+}
+
+.date-picker .dates .month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 24px 16px;
+}
+
+.date-picker .dates .month .arrows {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-text-color);
+  font-size: 20px;
+}
+
+.date-picker .dates .month .arrows:hover {
+  background-color: var(--super-light-color);
+  border-radius: 5px;
+}
+
+.date-picker .dates .month .arrows:active {
+  background-color: var(--divider-color);
+}
+
+.date-picker .dates .days-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0 16px 16px 16px;
+}
+
+.date-picker .dates .days-week .day-week {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--light-font-weight);
+  color: var(--dark-text-color);
+}
+
+.date-picker .dates .days {
+  display: grid;
+  gap: 8px;
+
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: repeat(5, 40px);
+  padding: 0 16px 16px 16px;
+}
+
+.date-picker .dates .days.long {
+  grid-template-rows: repeat(6, 40px);
+
+}
+
+.date-picker .dates .days .day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--semi-bold-font-weight);
+  font-size: var(--normal-body-font-size);
+}
+
+.date-picker .dates .days .day.disabled {
+  background-color: var(--background-color);
+  pointer-events: none;
+  color: var(--dark-text-color);
+  border-radius: 5px;
+  cursor: default; 
+}
+
+.date-picker .dates .days .day:hover:not(.current) {
+  background-color: var(--super-light-color);
+  border-radius: 5px;
+  color: var(--primary);
+}
+
+
+.date-picker .dates .days .day.current {
+  background-color: var(--primary);
+  color: var(--white-color);
+  border-radius: 5px;
+}
+
+.prev-mth {
+  background: url(../icons/leftArrow.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 1px;
+  right: 10px;
+  display: block;
+}
+
+.next-mth {
+  background: url(../icons/rightArrowDate.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 1px;
+  left: 10px;
+  display: block;
+}
+
+.next-year {
+  background: url(../icons/rightYear.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 1px;
+  right: 0px;
+  display: block;
+}
+
+.prev-year {
+  background: url(../icons/leftYear.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 1px;
+  right: 0px;
+  display: block;
+}

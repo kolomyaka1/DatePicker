@@ -1,0 +1,160 @@
+/* 
+<label class="control checkbox">
+<input type="checkbox" class="partial">
+</label>
+*/
+label {
+    display: flex;
+    width: 100%;
+}
+label.control {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* отступы для лейблов */
+label.control .label {
+    margin-right: 8px;
+}
+label.control input + .label {
+    margin-left: 8px;
+    margin-right: 0;
+    white-space: nowrap;
+}
+/* CHECKBOX */
+/* not checked */
+label.control.checkbox input {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    border: 1px solid var(--twenty-percent);
+    flex-shrink: 0;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px 16px;
+}
+label.control.checkbox input:hover,
+label.control.checkbox input.partial:checked,
+label.control.checkbox:hover input.partial:checked {
+    background-color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
+}
+label.control.checkbox input:disabled {
+    background-color: var(--background);
+    border-color: var(--divider);
+}
+/* checked */
+label.control.checkbox input:checked {
+    background-image: url(../icons/checkBox.svg);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+label.control.checkbox:hover input:checked {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+label.control.checkbox input:disabled:checked {
+    background-color: var(--twenty-percent);
+    border-color: var(--twenty-percent);
+}
+/* checked partial */
+label.control.checkbox input.partial:checked {
+    background-size: 13px 2px;
+}
+:root.researcher label.control.checkbox input.partial:checked {
+    background-image: url(../icons/controls/checkbox_partial_researcher.svg);
+}
+:root.respondent label.control.checkbox input.partial:checked {
+    background-image: url(../icons/controls/checkbox_partial_respondent.svg);
+}
+:root.researcher label.control.checkbox:hover input.partial:checked {
+    background-image: url(../icons/controls/checkbox_partial_hover_researcher.svg);
+}
+:root.respondent label.control.checkbox:hover input.partial:checked {
+    background-image: url(../icons/controls/checkbox_partial_hover_respondent.svg);
+}
+label.control.checkbox input.partial:disabled:checked {
+    border: none;
+    background-color: var(--background);
+    background-image: url(../icons/controls/checkbox_partial_disabled.svg) !important;
+}
+/* CHECKBOX */
+
+/* RADIO */
+label.control.radio input {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--twenty-percent);
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+}
+/* empty */
+label.control.radio input:hover {
+    background-color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
+}
+label.control.radio input:disabled {
+    background-color: var(--background);
+    border-color: var(--divider);
+}
+/* chosen */
+label.control.radio input:checked {
+    border: none;
+    background-image: url(../icons/controls/radio_checked.svg);
+    background-color: var(--primary);
+}
+label.control.radio:hover input:checked {
+    background-color: var(--dark);
+}
+label.control.radio input:disabled:checked {
+    background-size: 10px 10px;
+    background-color: var(--twenty-percent);
+}
+/* RADIO */
+
+/* SWITCH */
+label.control.switch input {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 24px;
+    border: none;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background-color: var(--secondary-hover);
+    background-position: left 4px top 50%;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-image: url(../icons/controls/radio_checked.svg);
+}
+/* off */
+label.control.switch:hover input:not(:disabled) {
+    background-position: center;
+    background-size: 32px 16px;
+    background-image: url(../icons/controls/switch_hover.svg);
+}
+label.control.switch input:disabled {
+    background-color: var(--divider);
+    pointer-events: none;
+}
+/* on */
+label.control.switch input:checked {
+    background-color: var(--primary);
+    background-position: right 4px top 50%;
+}
+label.control.switch input:disabled:checked {
+    background-color: var(--light-text);
+}
+/* SWITCH */

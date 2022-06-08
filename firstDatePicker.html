@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru" class="researcher">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-picker</title>
+    <link rel="stylesheet" href="./secondDatePicker.css">
+    <link rel="stylesheet" href="./style-artem.css">
+    <link rel="stylesheet" href="./controls.css">
+    <style>
+        .module>section>* {
+            width: 100%;
+            margin: 12px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- {% include 'researcher/header' %} -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo-link">
+                АИС<span>Исследователь</span>
+            </a>
+            <div class="header__user">
+                <a href="#" class="header__user-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.9067 7C16.9067 4.23858 14.6681 2 11.9067 2C9.1453 2 6.90672 4.23858 6.90672 7C6.90672 8.88174 7.94623 10.5207 9.48233 11.3739C6.65243 12.2728 4.50483 14.7032 4.0132 17.6916C4.01293 18.0312 4.01338 18.0664 4 18.2907C4.90643 19.5597 7.7127 22 11.9069 22C16.101 22 18.9073 19.5597 19.8137 18.2907C19.8137 18.0222 19.8137 18 19.8002 17.6911C19.3084 14.703 17.1609 12.2728 14.3311 11.3739C15.8672 10.5207 16.9067 8.88174 16.9067 7ZM18.8262 17.9348C18.3131 14.5743 15.4106 12 11.9067 12C8.40299 12 5.50049 14.5742 4.9873 17.9345C5.91328 19.0581 8.35233 21 11.9069 21C15.4611 21 17.9 19.0584 18.8262 17.9348ZM15.9067 7C15.9067 9.20914 14.1159 11 11.9067 11C9.69759 11 7.90672 9.20914 7.90672 7C7.90672 4.79086 9.69759 3 11.9067 3C14.1159 3 15.9067 4.79086 15.9067 7Z"
+                            fill="#2568DB" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- {% include 'researcher/nav-menu' %} -->
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__list-item">
+                <svg class="menu__list-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 4H10.5L13.5 6.5H20M9.5 7.5H5C4.44772 7.5 4 7.94772 4 8.5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V10.5C20 9.94772 19.5523 9.5 19 9.5H12L9.5 7.5Z"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="#">Мои проекты</a>
+            </li>
+            <li class="menu__list-item">
+                <svg class="menu__list-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 5.42847V17.5655" stroke="black" stroke-linecap="round" />
+                    <path d="M18.9995 9.07153V17.5715" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.16699 3H13.5836" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.16699 20H16.8335" stroke="black" stroke-linecap="round" />
+                    <path d="M19.0001 17.5715C19.006 18.7844 17.9168 20.0001 16.8335 20.0001" stroke="black"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.00036 17.5715C6.00036 18.7858 7.08368 20.0001 8.16699 20.0001" stroke="black"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.00036 5.427C6.00036 4.21448 7.08368 3.02724 8.16699 3.0002" stroke="black"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18.9939 9.07685L13.5833 3" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.5836 6.64294C13.5869 7.85062 14.6713 9.07151 15.7502 9.07151" stroke="black"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.5833 6.64284V3" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.7502 9.07153H19.0002" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.16699 17.5715H11.4169" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.16699 15.1427H13.5836" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.16699 12.7142H11.4169" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="#">Конструктор форм</a>
+            </li>
+            <li class="menu__list-item">
+                <svg class="menu__list-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5.16448 5.49699L5.12028 4.99894C4.88009 5.02026 4.68933 5.20998 4.66669 5.45005L5.16448 5.49699ZM7.1596 5.3972L7.17861 5.89684L7.17945 5.89681L7.1596 5.3972ZM12.0842 5.55329L12.1794 5.06245L12.1687 5.06037L12.158 5.05877L12.0842 5.55329ZM12.315 5.6819L11.9478 6.02119L11.9545 6.02847L11.9615 6.03548L12.315 5.6819ZM20.8385 14.2043L20.485 14.5579L20.4854 14.5583L20.8385 14.2043ZM20.8385 14.9826L20.4854 14.6286L20.485 14.629L20.8385 14.9826ZM14.6201 21.1999L14.9736 21.5535L14.9737 21.5534L14.6201 21.1999ZM13.843 21.1999L13.4894 21.5534L13.4895 21.5535L13.843 21.1999ZM5.31948 12.6775L5.67301 12.3239L5.66602 12.3169L5.65877 12.3102L5.31948 12.6775ZM5.19087 12.4466L4.69634 12.5204L4.69795 12.5312L4.70002 12.5419L5.19087 12.4466ZM5.03477 7.52203L5.53438 7.54188L5.5344 7.54141L5.03477 7.52203ZM5.20869 5.99503C5.85616 5.93756 6.50247 5.92256 7.17861 5.89684L7.1406 4.89756C6.48474 4.92251 5.80055 4.93856 5.12028 4.99894L5.20869 5.99503ZM7.17945 5.89681C8.77636 5.83337 10.6434 5.84388 12.0104 6.04782L12.158 5.05877C10.6955 4.8406 8.75263 4.83352 7.13976 4.8976L7.17945 5.89681ZM11.989 6.04414C11.9731 6.04107 11.9587 6.03303 11.9478 6.02119L12.6823 5.34261C12.5488 5.19808 12.3726 5.09993 12.1794 5.06245L11.989 6.04414ZM11.9615 6.03548L20.485 14.5579L21.1921 13.8507L12.6686 5.32833L11.9615 6.03548ZM20.4854 14.5583C20.49 14.5629 20.4937 14.5684 20.4962 14.5744L21.4198 14.1911C21.3669 14.0636 21.2894 13.9478 21.1916 13.8503L20.4854 14.5583ZM20.4962 14.5744C20.4987 14.5804 20.5 14.5869 20.5 14.5934H21.5C21.5 14.4554 21.4728 14.3187 21.4198 14.1911L20.4962 14.5744ZM20.5 14.5934C20.5 14.6 20.4987 14.6064 20.4962 14.6125L21.4198 14.9957C21.4728 14.8682 21.5 14.7315 21.5 14.5934H20.5ZM20.4962 14.6125C20.4937 14.6185 20.49 14.624 20.4854 14.6286L21.1916 15.3366C21.2894 15.2391 21.3669 15.1232 21.4198 14.9957L20.4962 14.6125ZM20.485 14.629L14.2666 20.8463L14.9737 21.5534L21.1921 15.3361L20.485 14.629ZM14.2666 20.8462C14.2573 20.8556 14.2447 20.8608 14.2316 20.8608V21.8608C14.5099 21.8608 14.7768 21.7502 14.9736 21.5535L14.2666 20.8462ZM14.2316 20.8608C14.2184 20.8608 14.2058 20.8556 14.1965 20.8462L13.4895 21.5535C13.6863 21.7502 13.9532 21.8608 14.2316 21.8608V20.8608ZM14.1965 20.8463L5.67301 12.3239L4.96595 13.031L13.4894 21.5534L14.1965 20.8463ZM5.65877 12.3102C5.6706 12.3211 5.67864 12.3356 5.68171 12.3514L4.70002 12.5419C4.7375 12.735 4.83565 12.9112 4.98019 13.0447L5.65877 12.3102ZM5.68539 12.3728C5.48146 11.0058 5.47094 9.13878 5.53438 7.54188L4.53517 7.50218C4.4711 9.11505 4.47817 11.058 4.69634 12.5204L5.68539 12.3728ZM5.5344 7.54141C5.56484 6.75652 5.61591 6.03558 5.66228 5.54393L4.66669 5.45005C4.61852 5.9609 4.56627 6.70024 4.53515 7.50265L5.5344 7.54141Z"
+                        fill="black" />
+                    <path
+                        d="M9.99306 8.2311C10.5798 8.81782 10.5798 9.76909 9.99306 10.3558C9.40634 10.9425 8.45507 10.9425 7.86834 10.3558C7.28162 9.76909 7.28162 8.81782 7.86834 8.2311C8.45507 7.64437 9.40634 7.64437 9.99306 8.2311Z"
+                        stroke="black" />
+                </svg>
+                <a href="#">Ярлыки</a>
+            </li>
+            <li class="menu__list-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 4H18.3158C18.3158 4 20 4.83333 20 6.91667C20 9 18.3158 9.83333 18.3158 9.83333H4C4 9.83333 5.68421 9 5.68421 6.91667C5.68421 4.83333 4 4 4 4ZM20 13.1667H5.68421C5.68421 13.1667 4 14 4 16.0833C4 18.1667 5.68421 19 5.68421 19H20C20 19 18.3158 18.1667 18.3158 16.0833C18.3158 14 20 13.1667 20 13.1667Z"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="#">Словари</a>
+            </li>
+            <li class="menu__list-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.5 5V6.5H15.5V5M8.5 5V5C8.5 3.89543 9.39543 3 10.5 3H13.5C14.6046 3 15.5 3.89543 15.5 5V5M8.5 5H6C5.44772 5 5 5.44772 5 6V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V6C19 5.44772 18.5523 5 18 5H15.5M8.5 11.5V17.5M12 15.5V17.5M15.5 14V17.5"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="#">Отчеты</a>
+            </li>
+            <li class="menu__list-item">
+                <svg class="menu__list-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.9067 7C16.9067 4.23858 14.6681 2 11.9067 2C9.1453 2 6.90672 4.23858 6.90672 7C6.90672 8.88174 7.94623 10.5207 9.48233 11.3739C6.65243 12.2728 4.50483 14.7032 4.0132 17.6916C4.01293 18.0312 4.01338 18.0664 4 18.2907C4.90643 19.5597 7.7127 22 11.9069 22C16.101 22 18.9073 19.5597 19.8137 18.2907C19.8137 18.0222 19.8137 18 19.8002 17.6911C19.3084 14.703 17.1609 12.2728 14.3311 11.3739C15.8672 10.5207 16.9067 8.88174 16.9067 7ZM18.8262 17.9348C18.3131 14.5743 15.4106 12 11.9067 12C8.40299 12 5.50049 14.5742 4.9873 17.9345C5.91328 19.0581 8.35233 21 11.9069 21C15.4611 21 17.9 19.0584 18.8262 17.9348ZM15.9067 7C15.9067 9.20914 14.1159 11 11.9067 11C9.69759 11 7.90672 9.20914 7.90672 7C7.90672 4.79086 9.69759 3 11.9067 3C14.1159 3 15.9067 4.79086 15.9067 7Z"
+                        fill="#1B1B1B" />
+                </svg>
+                <a href="#">Исследователи</a>
+            </li>
+            <li class="menu__list-item">
+                <svg class="menu__list-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 19V5C16 4.44772 15.5523 4 15 4H6C5.44771 4 5 4.44772 5 5V19H9V17H12V19H20V11.5L18.5 10"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M7.5 7H9.21429M11.7857 7H13.5M7.5 10.5H9.21429M11.7857 10.5H13.5M7.5 14H9.21429M11.7857 14H13.5"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="#">СОФРы</a>
+            </li>
+        </ul>
+        <a href="#" class="menu__help menu__list-item active">Помощь</a>
+    </nav>
+    <main>
+        <!-- {% block main %} -->
+        <!-- <header> -->
+        <header>
+            <h3>Date-Picker</h3>
+        </header>
+        <section>
+            <div class="module">
+                <section class="flex block">
+                    <div class="flex inline expand">
+                        <div class="configure__date-end">
+                            <label class="date-picker-label">
+                                <input type="date" name="date" style="display:none"
+                                    class="date-input required-input custom-input">
+                                <h5 class="module__header-text">Дата рассылки</h5>
+                                <div class="date-picker">
+                                    <div class="selected-date">
+
+                                    </div>
+                                    <div class="dates">
+                                        <div class="month">
+                                            <div class="arrows prev-year"></div>
+                                            <div class="arrows prev-mth"></div>
+                                            <div class="mth"></div>
+                                            <div class="arrows next-mth"></div>
+                                            <div class="arrows next-year"></div>
+                                        </div>
+                                        <div class="days-week">
+                                            <div class="day-week">пн</div>
+                                            <div class="day-week">вт</div>
+                                            <div class="day-week">ср</div>
+                                            <div class="day-week">чт</div>
+                                            <div class="day-week">пт</div>
+                                            <div class="day-week">сб</div>
+                                            <div class="day-week">вс</div>
+                                        </div>
+                                        <div class="days">
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+        <!-- <section> -->
+        <!-- {% endblock %} -->
+    </main>
+    <script src="./datepicket.js"></script>
+</body>
+
+</html>
